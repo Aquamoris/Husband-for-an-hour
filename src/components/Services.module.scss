@@ -1,0 +1,18 @@
+.wrapper {
+  min-height: fit-content;
+  width: 100%;
+  padding: 60px 20px 20px;
+  margin-bottom: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -23,9 +23,35 @@ body {
   outline-offset: 0;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
 a {
   text-decoration: none;
   color: inherit;
+}
+
+h1 {
+  font-size: clamp(25px, 0.994rem + 2.84vw, 50px);
+  color: $color_white;
+}
+
+h2 {
+  font-size: clamp(1rem, 0.602rem + 1.36vw, 1.625rem);
+  margin: 15px 0;
+}
+
+h3 {
+  font-size: clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem);
 }
 
 .App {
@@ -39,9 +65,12 @@ a {
 }
 
 header {
+  position: fixed;
   height: 100px;
+  width: 100%;
   background-color: $color_base;
   color: $color_white;
+  z-index: 1;
 }
 
 nav {
@@ -62,12 +91,74 @@ main {
   width: 1280px;
   margin: 0 auto;
 
-  min-height: 90vh;
+  min-height: 90dvh;
 }
 
 footer {
-  height: 200px;
+  height: 100px;
   background-color: $color_grey;
 
   flex: 0 0 auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+.button {
+  margin: 5px 0;
+  padding: 5px 0;
+
+  font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
+
+  border: 0;
+
+  background-color: $color_white;
+
+  cursor: pointer;
+}
+
+.buttonForm {
+  background-color: $color_base;
+  color: $color_white;
+
+  width: fit-content;
+  height: fit-content;
+
+  padding: 3% 7%;
+
+  border: 0;
+
+  font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
+
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  nav, main {
+    width: 1000px;
+  }
+}
+
+@media (max-width: 1000px) {
+  nav, main {
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav, main {
+    width: 480px;
+  }
+
+  nav {
+    justify-content: space-around;
+  }
+}
+
+
+@media (max-width: 480px) {
+  nav, main {
+    width: 100%;
+  }
 }

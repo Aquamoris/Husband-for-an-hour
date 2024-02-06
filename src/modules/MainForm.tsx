@@ -12,7 +12,6 @@ import {sendRequest} from "../api/telegram.api";
 interface MyFormValues {
     name: string;
     phone: string;
-    comment: string;
 }
 
 const SignupSchema = Yup.object().shape({
@@ -33,7 +32,6 @@ const MainForm: React.FC = () => {
     const initialValues: MyFormValues = {
         name: '',
         phone: '',
-        comment: '',
     };
 
     // const phoneHandler = (e: React.FormEvent<HTMLInputElement>) => {
@@ -62,7 +60,7 @@ const MainForm: React.FC = () => {
                         setIsLoading(true);
 
                         const message = `Муж на час | Новая заявка |
-                         Имя: ${values.name} | Телефон: ${values.phone} | Комментарий: ${values.comment}`;
+                         Имя: ${values.name} | Телефон: ${values.phone}`;
 
                         await sendRequest(message);
 
@@ -88,9 +86,6 @@ const MainForm: React.FC = () => {
                     <label className={styles.label} htmlFor="phone">Телефон</label>
                     <Field className={styles.input} type="number" id="phone" name="phone" placeholder="89123456789" />
                     {errors.phone && touched.phone ? (<div className={styles.error}>{errors.phone}</div>) : null}
-
-                    <label className={styles.label} htmlFor="comment">Комментарий</label>
-                    <Field className={styles.input} id="comment" name="comment" placeholder="Сборка мебели, шкаф" />
 
                     <button className={styles.button} type="submit" disabled={isLoading}>Отправить</button>
                 </Form>

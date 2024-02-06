@@ -2,8 +2,13 @@ import React, {useState} from 'react';
 import MainForm from "./modules/MainForm";
 import Modal from "./modules/Modal";
 import Header from "./modules/Header.tsx";
-import Footer from "./modules/Footer.tsx";
 import Main from "./components/Main.tsx";
+import Services from "./components/Services.tsx";
+import Prices from "./components/Prices.tsx";
+import Calculate from "./components/Calculate.tsx";
+import MapBlock from "./components/MapBlock.tsx";
+import Guarantees from "./components/Guarantees.tsx";
+import Footer from "./modules/Footer.tsx";
 
 const App:React.FC = () => {
     const [modalActive, setModalActive] = useState<boolean>(false);
@@ -11,13 +16,16 @@ const App:React.FC = () => {
     return (
         <div className="App">
             <Header openForm={setModalActive}/>
-            {/*<button onClick={() => setModalActive(true)}>Open</button>*/}
             <Main />
             <main>
-
+                <Services setActive={setModalActive}/>
+                <Prices />
+                <Calculate setActive={setModalActive}/>
+                <Guarantees />
+                <MapBlock />
             </main>
-            <Modal active={modalActive} setActive={setModalActive}><MainForm/></Modal>
             <Footer />
+            <Modal active={modalActive} setActive={setModalActive}><MainForm/></Modal>
         </div>
     );
 }

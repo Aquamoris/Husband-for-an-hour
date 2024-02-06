@@ -1,19 +1,12 @@
 @import "src/global";
 
 .button {
+  @extend .button;
   width: 100%;
-  margin: 5px 0;
-  padding: 5px 0;
+}
 
-  font-size: 16px;
-
-  border: 0;
-
-  background-color: $color_white;
-
-  cursor: pointer;
-
-  //border-radius: 6px;
-  //-webkit-border-radius: 6px;
-  //-moz-border-radius: 6px;
+@media (max-width: 800px) {
+  .link {
+    display: none;
+  }
 }

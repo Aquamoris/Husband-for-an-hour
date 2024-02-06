@@ -1,0 +1,27 @@
+@import "src/global";
+
+.wrapper {
+  height: 100%;
+
+  padding: 25px;
+}
+
+.imgWrapper {
+  width: 100%;
+  height: 80%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.title {
+  padding: 10px 0;
+  border-bottom: 1px solid $color_base;
+}
+
+.title, .subtitle {
+  margin: 10px 0;
+}

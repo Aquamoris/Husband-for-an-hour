@@ -1,0 +1,54 @@
+@import "src/global";
+
+.wrapper {
+  width: 1280px;
+
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: center;
+
+  color: $color_white;
+}
+
+.block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 5px;
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 1000px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 480px;
+  }
+
+  .block {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+
