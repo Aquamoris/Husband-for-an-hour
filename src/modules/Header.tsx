@@ -11,9 +11,8 @@ const Header:React.FC<Props> = ({ openForm }) => {
             <nav>
                 <h2>Мастер на час</h2>
                 <a className={styles.link} href="#services">Услуги</a>
-                <a className={styles.link} href="#">Работы</a>
                 <a className={styles.link} href="#prices">Цены</a>
-                <a className={styles.link} href="#">Контакты</a>
+                <a className={styles.link} href="#works">Работы</a>
                 <div className={styles.contacts}>
                     <h2><a href='tel:89112223344'>+7 (911) 222-33-44</a></h2>
                     <button className={styles.button} onClick={() => openForm(true)}>

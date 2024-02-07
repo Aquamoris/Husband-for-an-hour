@@ -9,6 +9,7 @@ import Calculate from "./components/Calculate.tsx";
 import MapBlock from "./components/MapBlock.tsx";
 import Guarantees from "./components/Guarantees.tsx";
 import Footer from "./modules/Footer.tsx";
+import Works from "./components/Works.tsx";
 
 const App:React.FC = () => {
     const [modalActive, setModalActive] = useState<boolean>(false);
@@ -22,6 +23,7 @@ const App:React.FC = () => {
                 <Prices />
                 <Calculate setActive={setModalActive}/>
                 <Guarantees />
+                <Works />
                 <MapBlock />
             </main>
             <Footer />
