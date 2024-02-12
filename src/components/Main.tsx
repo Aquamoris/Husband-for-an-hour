@@ -4,7 +4,6 @@ import { SiAdguard } from "react-icons/si";
 import { FaTruck } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
 import { FaClock } from "react-icons/fa";
-import main from '../assets/main.jpeg';
 
 const Main:React.FC = () => {
     const data = [
