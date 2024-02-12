@@ -72,6 +72,8 @@ const MainForm: React.FC = () => {
 
                         actions.setSubmitting(false);
                         actions.resetForm();
+
+                        alert('Ваша заявка успешно отправлена!')
                     }
 
                 }}
