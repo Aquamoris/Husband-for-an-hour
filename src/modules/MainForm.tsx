@@ -59,8 +59,7 @@ const MainForm: React.FC = () => {
                     try {
                         setIsLoading(true);
 
-                        const message = `Муж на час | Новая заявка |
-                         Имя: ${values.name} | Телефон: ${values.phone}`;
+                        const message = `Муж на час | Новая заявка | Имя: ${values.name} | Телефон: ${values.phone}`;
 
                         await sendRequest(message);
 
