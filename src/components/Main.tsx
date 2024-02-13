@@ -4,6 +4,7 @@ import { SiAdguard } from "react-icons/si";
 import { FaTruck } from "react-icons/fa";
 import { FaTools } from "react-icons/fa";
 import { FaClock } from "react-icons/fa";
+import SmallForm from "../modules/SmallForm.tsx";
 
 const Main:React.FC = () => {
     const data = [
@@ -16,7 +17,7 @@ const Main:React.FC = () => {
     return (
         <section className={styles.wrapper}>
             <div className={styles.main__content}>
-                <h1>
+                <h1 className={styles.main__title}>
                     Мастер на час в вашем городе
                 </h1>
                 <ul className={styles.main__list}>
@@ -28,6 +29,9 @@ const Main:React.FC = () => {
                         ))
                     }
                 </ul>
+                <div className={styles.main__form}>
+                    <SmallForm />
+                </div>
             </div>
         </section>
     );

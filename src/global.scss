@@ -8,6 +8,10 @@ $color_black: rgb(0, 0, 0);
 
 $border_radius_base: 12px;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
 }

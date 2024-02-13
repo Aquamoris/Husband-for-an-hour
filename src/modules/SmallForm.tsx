@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styles from './MainForm.module.scss';
+import styles from './SmallForm.module.scss';
 import {
     Formik,
     Form,
@@ -23,7 +23,7 @@ const SignupSchema = Yup.object().shape({
         .required('Поле телефон обязательно к заполнению')
 });
 
-const MainForm: React.FC = () => {
+const SmallForm: React.FC = () => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
     const initialValues: MyFormValues = {
@@ -62,21 +62,21 @@ const MainForm: React.FC = () => {
                 }}
             >
                 {({ errors, touched }) => (
-                <Form className={styles.formWrapper}>
-                    <label className={styles.label} htmlFor="name">Имя</label>
-                    <Field className={styles.input} id="name" name="name" placeholder="Иван" />
-                    {errors.name && touched.name ? (<div className={styles.error}>{errors.name}</div>) : null}
+                    <Form className={styles.formWrapper}>
+                        <label className={styles.label} htmlFor="name">Имя</label>
+                        <Field className={styles.input} id="name" name="name" placeholder="Иван" />
+                        {errors.name && touched.name ? (<div className={styles.error}>{errors.name}</div>) : null}
 
-                    <label className={styles.label} htmlFor="phone">Телефон</label>
-                    <Field className={styles.input} type="number" id="phone" name="phone" placeholder="89123456789" />
-                    {errors.phone && touched.phone ? (<div className={styles.error}>{errors.phone}</div>) : null}
+                        <label className={styles.label} htmlFor="phone">Телефон</label>
+                        <Field className={styles.input} type="number" id="phone" name="phone" placeholder="89123456789" />
+                        {errors.phone && touched.phone ? (<div className={styles.error}>{errors.phone}</div>) : null}
 
-                    <button className={styles.button} type="submit" disabled={isLoading}>Отправить</button>
-                </Form>
+                        <button className={styles.button} type="submit" disabled={isLoading}>Отправить</button>
+                    </Form>
                 )}
             </Formik>
         </div>
     );
 };
 
-export default MainForm;
+export default SmallForm;

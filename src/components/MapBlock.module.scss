@@ -1,7 +1,7 @@
 @import "src/global";
 
 .wrapper {
-  height: 60dvh;
+  min-height: 60dvh;
   width: 100%;
 
   padding: 25px;
@@ -9,7 +9,7 @@
   margin: 25px 0;
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 0.9fr 1fr;
 
   gap: 0 5%;
 
@@ -36,6 +36,6 @@
 
 @media (max-width: 768px) {
   .wrapper {
-    grid-template-columns: 0.8fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
